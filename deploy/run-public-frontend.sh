@@ -6,7 +6,7 @@ IMAGE_NAME="my-diary-frontend"
 CONTAINER_NAME="my-diary-frontend"
 
 # Private 서버의 사설IP 설정
-BACKEND_HOST="10.10.2.6"
+BACKEND_HOST="${BACKEND_HOST:-10.10.2.6}"
 
 cd "$(dirname "$0")/.."
 
