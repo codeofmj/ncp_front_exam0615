@@ -18,7 +18,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # nginx 실행 시 BACKEND_HOST에 환경변수 주입
-ENV BACKEND_HOST=${BACKEND_HOST}
+# ENV BACKEND_HOST=${BACKEND_HOST}
 
 # nginx 설정 템플릿 파일을 conf.d폴더로 복사
 # default.conf.template -> default.conf 로 자동 치환
