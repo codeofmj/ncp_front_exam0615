@@ -10,6 +10,17 @@ server {
         try_files $uri /index.html;
     }
 
+    # 로드밸런서 분산 확인용 경로 설정
+    location /frontend-info {
+
+        # 응답형태를 JSON형식으로 설정
+        default_type application/json;
+
+        # 응답결과 설정
+        return 200 '{ "type":"frontend", "hostname":"${FRONTEND_NAME}" }';
+
+    }
+
     location /assets/ {
         try_files $uri =404;
     }
